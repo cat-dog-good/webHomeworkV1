@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>登录</title>
+  <style>
+
+
+    *{
+      color: red;
+    }
+    body{
+      background: url("../Image/background1.png") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+
+    form{
+      background-image: url("../Image/background2.png");
+      background-size: cover;
+      float: left;
+      color: white;
+      box-shadow: 5px 5px 5px #888888;
+      border-radius: 10px;
+    }
+
+
+    .back{
+      float:right;
+    }
+
+
+    a:hover{
+      color: aqua;
+    }
+
+
+    .back:before{
+      content: "<<";
+    }
+
+    div{
+      display: flex;
+      justify-content: center;
+
+    }
+  </style>
+</head>
+<body>
+
+<a class="back" href="index.html" >回到首页</a>
+
+<div>
+<form><!--登陆表单-->
+  <h2>请登录</h2>
+
+  <label>姓名:  <input type="text" placeholder="请输入姓名"></label>
+  <br>
+  <label>密码:  <input type="password" placeholder="请输入密码"></label>
+  <br>
+  <br><br>
+
+  <!--协议-->
+  <label><input type="checkbox">已阅读并同意下协议</label>
+
+  <ul>
+    <li><a href="#"><ins>《用户服务协议》</ins></a></li>
+    <li><a href="#"><ins>《隐私政策》</ins></a></li>
+  </ul>
+
+
+  <!--按钮-->
+  <button type="submit">登录</button>
+  <button type="reset">重新填写</button>
+</form>
+</div>
+
+</body>
+</html>
