@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>"旅游通"-酒店信息</title>
+    <style>
+
+
+        h2{
+            display: flex;
+            justify-content: center;
+
+        }
+
+
+        body{
+            background: url("../Image/Attraction2.png") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        a:hover{
+            color: fuchsia;
+        }
+
+
+        nav div{
+            display: flex;
+            justify-content: center;
+        }
+
+
+        div.description{
+            background-color: #dddddd;
+            width: 50%;
+            font-family: 楷体;
+            text-align: center;
+            margin: auto;
+            color: red;
+        }
+
+
+
+        nav{
+            background-color: antiquewhite;
+            height: 50px;
+        }
+
+
+
+        #backIndex:before{
+            content: "<<";
+        }
+
+        .banner-container{
+            width:1200px;
+            height:600px;
+
+            margin:1rem auto;
+
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner-container .banner-img-container {
+            width:6000px;
+            height:600px;
+            overflow: hidden;
+            position: absolute;
+            display: flex;
+            animation: run 10s ease infinite;
+        }
+
+        .banner-container .banner-img-container img{
+            width:1200px;
+            height:100%;
+        }
+
+
+        @keyframes run {
+            0%,10%{
+                /* margin-left: 0; */
+                transform: translateX(0);
+            }
+            20%,30%{
+                /* margin-left: -1200px;; */
+                transform: translateX(-1200px);
+            }
+            40%,50%{
+                /* margin-left: -2400px; */
+                transform: translateX(-2400px);
+            }
+            60%,70%{
+                /* margin-left: -3600px; */
+                transform: translateX(-3600px);
+            }
+            80%,90%{
+                /* margin-left: -4800px; */
+                transform: translateX(-4800px);
+            }
+            100%{
+                /* margin-left: 0; */
+                transform: translateX(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+<!--导航栏-->
+<nav>
+    <a id="backIndex" href="index.html">回到首页</a>
+    <div>
+        <label><input type="text" placeholder="搜索地点附近的酒店"></label>
+    </div>
+
+</nav>
+
+<div> <!--酒店服务信息查询功能-->
+    <h2>欢迎使用酒店服务信息查询功能！</h2>
+
+    <!-- 创建外部展示容器 -->
+    <div class="banner-container">
+
+        <!-- 创建图片存储容器 -->
+        <div class="banner-img-container">
+
+            <img src="../Image/hotel1.png" alt="这是酒店图片" title="这是酒店图片">
+            <img src="../Image/hotel2.png" alt="这是酒店图片" title="这是酒店图片">
+            <img src="../Image/hotel3.png" alt="这是酒店图片" title="这是酒店图片">
+            <img src="../Image/hotel4.png" alt="这是酒店图片" title="这是酒店图片">
+            <img src="../Image/hotel5.png" alt="这是酒店图片" title="这是酒店图片">
+
+        </div>
+    </div>
+    <div class="description">想要一个舒服的出游体验，一家实惠又舒服的酒店是必不可少的；本平台搜罗的大大小小的酒店再将其筛选汇总，
+        并附加了酒店住户的评价，让您能拥有一段美好的回忆</div>
+
+    <br>
+
+</div>
+
+
+<nav><!--反馈  栏-->
+    <div>
+        <button>评价平台</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button>反馈错误信息</button>
+    </div>
+
+</nav>
+
+</body>
+</html>

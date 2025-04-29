@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>"旅游通"-景点信息</title>
+
+    <style>
+
+        h2{
+            display: flex;
+            justify-content: center;
+        }
+
+        body{
+            background: url("../Image/background4.png") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        a:hover{
+            color: fuchsia;
+        }
+
+        .nav{
+            background-color: antiquewhite;
+            height: 50px;
+        }
+
+        nav div{
+            display: flex;
+            justify-content: center;
+        }
+
+        #backIndex:before{
+            content: "<<";
+        }
+
+        div.description{
+            background-color: #dddddd;
+            width: 50%;
+            font-family: 楷体;
+            text-align: center;
+            margin: auto;
+            color: red;
+        }
+
+        .banner-container{
+            width:1200px;
+            height:600px;
+            /* 轮播图居中 */
+            margin:1rem auto;
+            /* 隐藏超出展示容器的内容 */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner-container .banner-img-container {
+            width:6000px;
+            height:600px;
+            overflow: hidden;
+            position: absolute;
+            /* 开启弹性盒，让图片横向排列 */
+            display: flex;
+            animation: run 10s ease infinite;
+        }
+
+        .banner-container .banner-img-container img{
+            width:1200px;
+            height:100%;
+        }
+
+        /* 轮播图关键帧 */
+        /* 自动轮播 */
+        @keyframes run {
+            0%,10%{
+                /* margin-left: 0; */
+                transform: translateX(0);
+            }
+            20%,30%{
+                /* margin-left: -1200px;; */
+                transform: translateX(-1200px);
+            }
+            40%,50%{
+                /* margin-left: -2400px; */
+                transform: translateX(-2400px);
+            }
+            60%,70%{
+                /* margin-left: -3600px; */
+                transform: translateX(-3600px);
+            }
+            80%,90%{
+                /* margin-left: -4800px; */
+                transform: translateX(-4800px);
+            }
+            100%{
+                /* margin-left: 0; */
+                transform: translateX(0);
+            }
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+
+<nav class="nav">
+    <a  id="backIndex" href="index.html">回到首页</a>
+    <div>
+        <label><input type="text" placeholder="搜索你心仪的景点"></label>
+    </div>
+
+</nav>
+
+
+
+<div>
+    <h2>欢迎使用景点信息查询功能！</h2>
+
+    <!-- 创建外部展示容器 -->
+    <div class="banner-container">
+
+        <!-- 创建图片存储容器 -->
+        <div class="banner-img-container">
+
+            <img src="../Image/Attraction1.png" alt="这是景点图片" title="这是景点图片">
+            <img src="../Image/Attraction2.png" alt="这是景点图片" title="这是景点图片">
+            <img src="../Image/Attraction3.png" alt="这是景点图片" title="这是景点图片">
+            <img src="../Image/Attraction4.png" alt="这是景点图片" title="这是景点图片">
+            <img src="../Image/Attraction5.png" alt="这是景点图片" title="这是景点图片">
+
+        </div>
+    </div>
+    <div class="description">本平台收录了世界上几百个景点，不管您想去的是热门还是小众、国内亦或国外，本平台都能满足您的需要！</div>
+
+    <br>
+
+</div>
+
+<nav class="nav">
+    <div>
+        <button>评价平台</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button>反馈错误信息</button>
+    </div>
+
+</nav>
+
+</body>
+</html>
